@@ -13,7 +13,13 @@ vid.addEventListener('timeupdate', () => {
         }
         else{
             span[i].classList.remove('highlight');
-            }
-    }
-    
+        }
+    }    
 });
+for (let i = 0; i < span.length; i += 1){
+span[i].addEventListener('click', () => {
+    vid.currentTime = span[i].dataset.start;
+    vid.play();
+});
+}
+
